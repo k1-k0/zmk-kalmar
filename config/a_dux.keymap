@@ -5,22 +5,135 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
 
 / {
+    behaviors {
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_grave_l {
+            timeout-ms = <20>;
+            key-positions = <1 2>;
+            bindings = <&kp GRAVE>;
+        };
+        combo_tab_l {
+            timeout-ms = <20>;
+            key-positions = <2 3>;
+            bindings = <&kp TAB>;
+        };
+        combo_grave_r {
+            timeout-ms = <20>;
+            key-positions = <7 8>;
+            bindings = <&kp GRAVE>;
+        };
+        combo_tab_r {
+            timeout-ms = <20>;
+            key-positions = <6 7>;
+            bindings = <&kp TAB>;
+        };
+
+        combo_caps_l {
+            timeout-ms = <20>;
+            key-positions = <11 12>;
+            bindings = <&kp CAPS>;
+        };
+        combo_sqt_l {
+            timeout-ms = <20>;
+            key-positions = <12 13>;
+            bindings = <&kp SQT>;
+        };
+        combo_caps_r {
+            timeout-ms = <20>;
+            key-positions = <17 18>;
+            bindings = <&kp CAPS>;
+        };
+        combo_sqt_r {
+            timeout-ms = <20>;
+            key-positions = <16 17>;
+            bindings = <&kp SQT>;
+        };
+
+        combo_app_l {
+            timeout-ms = <20>;
+            key-positions = <21 22>;
+            bindings = <&kp K_APP>;
+        };
+        combo_bslh_l {
+            timeout-ms = <20>;
+            key-positions = <22 23>;
+            bindings = <&kp BSLH>;
+        };
+        combo_lbkt_r {
+            timeout-ms = <20>;
+            key-positions = <26 27>;
+            bindings = <&kp LBKT>;
+        };
+        combo_rbkt_r {
+            timeout-ms = <20>;
+            key-positions = <27 28>;
+            bindings = <&kp RBKT>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
-
-        // This is a sample keymap intended to be replaced with your own
-        base_layer {
+        default_layer {
             bindings = <
-                &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     &kp P
-                &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L     &kp SEMI
-                &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH
-                                              &kp TAB   &kp BSPC  &kp SPACE &kp ENTER
+            &lt 4 Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &lt 4 P
+            &ht LGUI A  &ht LALT S  &ht LCTRL D     &ht LSHFT F     &kp G          &kp H   &ht RSHFT J    &ht RCTRL K     &ht RALT L  &ht RGUI SEMI
+            &kp Z      &kp X      &lt 1 C      &lt 2 V      &lt 3 B          &lt 3 N      &lt 2 M      &lt 1 COMMA  &kp DOT    &kp FSLH
+                                            &lt 1 SPACE   &lt 2 ENTER     &lt 2 ESCAPE  &lt 1 BSPC
             >;
         };
 
+        lower_layer {
+            bindings = <
+            &kp FSLH    &kp N7     &kp N8     &kp N9     &kp PLUS         &caps_word   &kp PG_UP  &kp UARW  &kp PG_DN    &kp INS
+            &ht LGUI KP_MULTIPLY &ht LALT N4 &ht LCTRL N5 &ht LSHFT N6 &kp MINUS &kp HOME &ht RSHFT LARW &ht RCTRL DARW   &ht RALT RARW   &ht RGUI END
+            &kp N0  &kp N1     &kp N2     &kp N3     &kp EQUAL         &kp CAPS     &kp SQT     &kp K_APP &kp PSCRN     &kp DEL
+                                             &trans     &kp TAB        &kp TAB     &trans
+            >;
+        };
+
+        raise_layer {
+            bindings = <
+            &kp KP_DIVIDE      &kp AMPS   &kp ASTRK   &kp LPAR   &kp DQT         &kp EQUAL  &kp SQT   &kp GRAVE   &kp BSLH   &kp PIPE
+            &kp KP_MULTIPLY   &kp DLLR     &kp PRCNT   &kp CARET   &kp SQT      &kp MINUS  &kp LPAR  &kp LBKT  &kp LBRC   &kp LT
+            &kp RPAR     &kp EXCL     &kp AT     &kp HASH     &kp GRAVE         &kp UNDER   &kp RPAR  &kp RBKT   &kp RBRC   &kp GT
+                                             &trans     &trans         &trans     &trans
+            >;
+        };
+
+        adjust_layer {
+            bindings = <
+            &out OUT_BLE    &kp F7      &kp F8          &kp F9          &kp F10    &kp PAUSE_BREAK     &kp C_BRI_UP     &kp C_VOL_UP    &kp C_BRI_DN    &out OUT_BLE
+            &ht LGUI PSCRN  &ht LALT F4 &ht LCTRL F5    &ht LSHFT F6    &kp F11    &kp K_APP     &ht RSHFT C_PREV     &ht RCTRL C_VOL_DN     &ht RALT C_NEXT    &ht RGUI PSCRN
+            &out OUT_USB      &kp F1      &kp F2          &kp F3          &kp F12    &key_repeat     &kp C_STOP     &kp C_MUTE     &kp C_PP     &out OUT_USB
+                                             &trans     &trans         &trans     &trans
+            >;
+        };
+
+        bt_layer {
+            bindings = <
+            &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 1  &bt BT_SEL 0  &trans  &trans  &trans
+            &trans  &bt BT_CLR  &trans  &trans  &bt BT_SEL 2  &bt BT_SEL 2 &trans  &trans  &bt BT_CLR  &trans
+            &bt BT_CLR_ALL  &trans  &trans  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &bt BT_CLR_ALL
+                                    &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };
