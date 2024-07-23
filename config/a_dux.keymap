@@ -126,15 +126,15 @@
             bindings = <&sk RALT>;
         };
 
-        combo_sticky_adjust_l {
+        combo_toggle_adjust_l {
             timeout-ms = <20>;
             key-positions = <21 23>;
-            bindings = <&sl 3>;
+            bindings = <&tog 3>;
         };
-        combo_sticky_adjust_r {
+        combo_toggle_adjust_r {
             timeout-ms = <20>;
             key-positions = <26 28>;
-            bindings = <&sl 3>;
+            bindings = <&tog 3>;
         };
 
         combo_toggle_lower_l {
