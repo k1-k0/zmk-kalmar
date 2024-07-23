@@ -157,6 +157,17 @@
             key-positions = <25 29>;
             bindings = <&tog 5>;
         };
+
+        combo_mo_adjust_l {
+            timeout-ms = <20>;
+            key-positions = <30 33>;
+            bindings = <&mo 3>;
+        };
+        combo_mo_adjust_r {
+            timeout-ms = <20>;
+            key-positions = <31 32>;
+            bindings = <&mo 3>;
+        };
     };
 
     keymap {
