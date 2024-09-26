@@ -58,6 +58,21 @@
             key-positions = <11 13>;
             bindings = <&kp ENTER>;
         };
+        combo_thumb_grave_l {
+            timeout-ms = <30>;
+            key-positions = <11 30>;
+            bindings = <&kp GRAVE>;
+        };
+         combo_thumb_tab_l {
+            timeout-ms = <30>;
+            key-positions = <12 30>;
+            bindings = <&kp TAB>;
+        };
+        combo_thumb_caps_l {
+            timeout-ms = <30>;
+            key-positions = <13 30>;
+            bindings = <&kp CAPS>;
+        };
         combo_sqt_r {
             timeout-ms = <20>;
             key-positions = <16 17>;
@@ -72,6 +87,21 @@
             timeout-ms = <20>;
             key-positions = <16 18>;
             bindings = <&kp ENTER>;
+        };
+        combo_thumb_caps_r {
+            timeout-ms = <30>;
+            key-positions = <16 33>;
+            bindings = <&kp CAPS>;
+        };
+        combo_thumb_tab_r {
+            timeout-ms = <30>;
+            key-positions = <17 33>;
+            bindings = <&kp TAB>;
+        };
+        combo_thumb_grave_r {
+            timeout-ms = <30>;
+            key-positions = <18 33>;
+            bindings = <&kp GRAVE>;
         };
 
         combo_grave_l {
