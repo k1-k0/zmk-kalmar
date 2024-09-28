@@ -53,26 +53,6 @@
             key-positions = <12 13>;
             bindings = <&kp SQT>;
         };
-        combo_enter_l {
-            timeout-ms = <20>;
-            key-positions = <11 13>;
-            bindings = <&kp ENTER>;
-        };
-        combo_thumb_grave_l {
-            timeout-ms = <30>;
-            key-positions = <11 30>;
-            bindings = <&kp GRAVE>;
-        };
-         combo_thumb_tab_l {
-            timeout-ms = <30>;
-            key-positions = <12 30>;
-            bindings = <&kp TAB>;
-        };
-        combo_thumb_caps_l {
-            timeout-ms = <30>;
-            key-positions = <13 30>;
-            bindings = <&kp CAPS>;
-        };
         combo_sqt_r {
             timeout-ms = <20>;
             key-positions = <16 17>;
@@ -83,25 +63,46 @@
             key-positions = <17 18>;
             bindings = <&kp CAPS>;
         };
-        combo_enter_r {
-            timeout-ms = <20>;
-            key-positions = <16 18>;
+
+        combo_lower_enter_l {
+            timeout-ms = <30>;
+            key-positions = <10 30>;
             bindings = <&kp ENTER>;
         };
-        combo_thumb_caps_r {
+        combo_lower_grave_l {
+            timeout-ms = <30>;
+            key-positions = <11 30>;
+            bindings = <&kp GRAVE>;
+        };
+         combo_lower_tab_l {
+            timeout-ms = <30>;
+            key-positions = <12 30>;
+            bindings = <&kp TAB>;
+        };
+        combo_lower_caps_l {
+            timeout-ms = <30>;
+            key-positions = <13 30>;
+            bindings = <&kp CAPS>;
+        };
+        combo_lower_caps_r {
             timeout-ms = <30>;
             key-positions = <16 33>;
             bindings = <&kp CAPS>;
         };
-        combo_thumb_tab_r {
+        combo_lower_tab_r {
             timeout-ms = <30>;
             key-positions = <17 33>;
             bindings = <&kp TAB>;
         };
-        combo_thumb_grave_r {
+        combo_lower_grave_r {
             timeout-ms = <30>;
             key-positions = <18 33>;
             bindings = <&kp GRAVE>;
+        };
+        combo_lower_enter_r {
+            timeout-ms = <30>;
+            key-positions = <19 33>;
+            bindings = <&kp ENTER>;
         };
 
         combo_grave_l {
@@ -125,68 +126,78 @@
             bindings = <&kp GRAVE>;
         };
 
-        combo_sticky_alt_l {
-            timeout-ms = <20>;
-            key-positions = <11 21>;
-            bindings = <&sk LALT>;
-        };
-        combo_sticky_ctrl_l {
-            timeout-ms = <20>;
-            key-positions = <12 22>;
-            bindings = <&sk LCTRL>;
-        };
-        combo_sticky_shift_l {
-            timeout-ms = <20>;
-            key-positions = <13 23>;
-            bindings = <&sk LSHIFT>;
-        };
-        combo_sticky_gui_l {
-            timeout-ms = <20>;
-            key-positions = <14 24>;
+        combo_raise_sticky_gui_l {
+            timeout-ms = <30>;
+            key-positions = <10 31>;
             bindings = <&sk LGUI>;
         };
-        combo_sticky_gui_r {
-            timeout-ms = <20>;
-            key-positions = <15 25>;
-            bindings = <&sk RGUI>;
+        combo_raise_sticky_alt_l {
+            timeout-ms = <30>;
+            key-positions = <11 31>;
+            bindings = <&sk LALT>;
         };
-        combo_sticky_shift_r {
-            timeout-ms = <20>;
-            key-positions = <16 26>;
+        combo_raise_sticky_ctrl_l {
+            timeout-ms = <30>;
+            key-positions = <12 31>;
+            bindings = <&sk LCTRL>;
+        };
+        combo_raise_sticky_shift_l {
+            timeout-ms = <30>;
+            key-positions = <13 31>;
+            bindings = <&sk LSHIFT>;
+        };
+        combo_raise_sticky_adjust_l {
+            timeout-ms = <30>;
+            key-positions = <21 31>;
+            bindings = <&tog 3>;
+        };
+        combo_raise_sticky_lower_l {
+            timeout-ms = <30>;
+            key-positions = <22 31>;
+            bindings = <&tog 1>;
+        };
+        combo_raise_sticky_raise_l {
+            timeout-ms = <30>;
+            key-positions = <23 31>;
+            bindings = <&tog 2>;
+        };
+
+        combo_raise_sticky_shift_r {
+            timeout-ms = <30>;
+            key-positions = <16 32>;
             bindings = <&sk RSHIFT>;
         };
-        combo_sticky_ctrl_r {
-            timeout-ms = <20>;
-            key-positions = <17 27>;
+        combo_raise_sticky_ctrl_r {
+            timeout-ms = <30>;
+            key-positions = <17 32>;
             bindings = <&sk RCTRL>;
         };
-        combo_sticky_alt_r {
-            timeout-ms = <20>;
-            key-positions = <18 28>;
+        combo_raise_sticky_alt_r {
+            timeout-ms = <30>;
+            key-positions = <18 32>;
             bindings = <&sk RALT>;
         };
-
-        combo_toggle_adjust_l {
-            timeout-ms = <20>;
-            key-positions = <21 23>;
-            bindings = <&tog 3>;
+        combo_raise_sticky_gui_r {
+            timeout-ms = <30>;
+            key-positions = <19 32>;
+            bindings = <&sk RGUI>;
         };
-        combo_toggle_adjust_r {
-            timeout-ms = <20>;
-            key-positions = <26 28>;
-            bindings = <&tog 3>;
+        combo_raise_sticky_raise_r {
+            timeout-ms = <30>;
+            key-positions = <26 32>;
+            bindings = <&tog 2>;
         };
-
-        combo_toggle_lower_l {
-            timeout-ms = <20>;
-            key-positions = <12 23>;
+        combo_raise_sticky_lower_r {
+            timeout-ms = <30>;
+            key-positions = <27 32>;
             bindings = <&tog 1>;
         };
-        combo_toggle_lower_r {
-            timeout-ms = <20>;
-            key-positions = <17 26>;
-            bindings = <&tog 1>;
+        combo_raise_sticky_adjust_r {
+            timeout-ms = <30>;
+            key-positions = <28 32>;
+            bindings = <&tog 3>;
         };
+
         combo_toggle_game_l {
             timeout-ms = <20>;
             key-positions = <20 24>;
