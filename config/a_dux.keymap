@@ -62,7 +62,7 @@
         combo_f13_l {
             timeout-ms = <20>;
             key-positions = <11 12>;
-            bindings = <&kp F13>;
+            bindings = <&kp ESC>;
         };
 
         combo_grave_l {
@@ -104,13 +104,13 @@
         combo_f14_r {
             timeout-ms = <20>;
             key-positions = <17 18>;
-            bindings = <&kp F14>;
+            bindings = <&kp ESC>;
         };
 
         combo_caps_l {
             timeout-ms = <20>;
             key-positions = <21 22>;
-            bindings = <&kp CAPS>;
+            bindings = <&kp ENTER>;
         };
 
         combo_lbkt_l {
@@ -128,7 +128,7 @@
         combo_capsword_r {
             timeout-ms = <20>;
             key-positions = <27 28>;
-            bindings = <&caps_word>;
+            bindings = <&kp ENTER>;
         };
 
         combo_toggle_game_l {
@@ -158,10 +158,10 @@
 
         nav {
             bindings = <
-&kp C_AC_REDO   &kp C_VOL_DN        &kp C_MUTE     &kp C_VOL_UP           &kp C_NEXT                    &kp INS     &kp PG_UP       &kp UP_ARROW    &kp PG_DN       &caps_word
-&ht LSHIFT F15  &ht LALT C_AC_BACK  &ht LCTRL ESC  &ht LGUI C_AC_FORWARD  &kp C_PP                      &kp HOME    &ht RSHFT LEFT  &ht RCTRL DOWN  &ht RALT RIGHT  &ht RGUI END
-&kp C_AC_UNDO   &kp C_AC_CUT        &kp C_AC_COPY  &kp C_AC_PASTE         &kp C_PREV                    &kp DELETE  &kp F13         &kp K_APP       &kp F14         &kp CAPS
-                                                                          &trans      &trans    &trans  &trans
+&kp C_AC_REDO   &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP           &kp C_NEXT                    &kp INS     &kp PG_UP       &kp UP_ARROW    &kp PG_DN       &caps_word
+&ht LSHIFT F15  &ht LALT C_AC_BACK  &ht LCTRL K_APP  &ht LGUI C_AC_FORWARD  &kp C_PP                      &kp HOME    &ht RSHFT LEFT  &ht RCTRL DOWN  &ht RALT RIGHT  &ht RGUI END
+&kp C_AC_UNDO   &kp C_AC_CUT        &kp C_AC_COPY    &kp C_AC_PASTE         &kp C_PREV                    &kp DELETE  &kp F13         &kp ESC         &kp F14         &kp CAPS
+                                                                            &trans      &trans    &trans  &trans
             >;
         };
 
@@ -177,7 +177,7 @@
         fun {
             bindings = <
 &kp KP_MULTIPLY  &kp N7       &kp N8        &kp N9       &kp PLUS                     &kp PAUSE_BREAK  &kp F7        &kp F8        &kp F9       &kp F10
-&ht LSHFT N0     &ht LALT N4  &ht LCTRL F5  &ht LGUI N6  &kp MINUS                    &kp PSCRN        &ht RSHFT F4  &ht RCTRL F5  &ht RALT F6  &ht RSHFT F11
+&ht LSHFT N0     &ht LALT N4  &ht LCTRL N5  &ht LGUI N6  &kp MINUS                    &kp PSCRN        &ht RSHFT F4  &ht RCTRL F5  &ht RALT F6  &ht RSHFT F11
 &kp KP_DIVIDE    &kp N1       &kp N2        &kp N3       &kp EQUAL                    &key_repeat      &kp F1        &kp F2        &kp F3       &kp F12
                                                          &trans     &trans    &trans  &trans
             >;
