@@ -7,6 +7,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
 / {
     behaviors {
         ht: hold_tap {
@@ -149,37 +154,37 @@
 
         qwe {
             bindings = <
-&lt 4 Q      &kp W       &kp E        &kp R       &kp T                                  &kp Y           &kp U       &kp I        &kp O       &lt 4 P
-&ht LSHFT A  &ht LALT S  &ht LCTRL D  &ht LGUI F  &kp G                                  &kp H           &ht RGUI J  &ht RCTRL K  &ht RALT L  &ht RSHFT SEMI
-&kp Z        &kp X       &kp C        &kp V       &kp B                                  &kp N           &kp M       &kp COMMA    &kp DOT     &kp FSLH
-                                                  &lt 1 SPACE  &lt 2 TAB    &lt 3 ENTER  &ht LSHFT BSPC
+&kp Q  &kp W       &kp E        &kp R        &kp T                                  &kp Y       &kp U        &kp I        &kp O       &kp P
+&kp A  &ht LALT S  &ht LCTRL D  &ht LSHFT F  &kp G                                  &kp H       &ht RSHFT J  &ht RCTRL K  &ht RALT L  &kp SEMI
+&kp Z  &kp X       &kp C        &ht LGUI V   &kp B                                  &kp N       &ht RGUI M   &kp COMMA    &kp DOT     &kp FSLH
+                                             &lt 1 SPACE  &lt 2 TAB    &lt 2 ENTER  &lt 1 BSPC
             >;
         };
 
         nav {
             bindings = <
-&kp C_AC_REDO   &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP           &kp C_NEXT                    &kp INS     &kp PG_UP       &kp UP_ARROW    &kp PG_DN       &caps_word
-&ht LSHIFT F15  &ht LALT C_AC_BACK  &ht LCTRL K_APP  &ht LGUI C_AC_FORWARD  &kp C_PP                      &kp HOME    &ht RSHFT LEFT  &ht RCTRL DOWN  &ht RALT RIGHT  &ht RGUI END
-&kp C_AC_UNDO   &kp C_AC_CUT        &kp C_AC_COPY    &kp C_AC_PASTE         &kp C_PREV                    &kp DELETE  &kp F13         &kp ESC         &kp F14         &kp CAPS
-                                                                            &trans      &trans    &trans  &trans
+&kp C_AC_REDO    &kp C_VOL_DN        &kp C_MUTE       &kp C_VOL_UP            &kp C_NEXT                    &kp INS     &kp PG_UP       &kp UP_ARROW    &kp PG_DN       &caps_word
+&kp F15          &ht LALT C_AC_BACK  &ht LCTRL K_APP  &ht LSHFT C_AC_FORWARD  &kp C_PP                      &kp HOME    &ht RSHFT LEFT  &ht RCTRL DOWN  &ht RALT RIGHT  &kp END
+&lt 4 C_AC_UNDO  &kp C_AC_CUT        &kp C_AC_COPY    &ht LGUI C_AC_PASTE     &kp C_PREV                    &kp DELETE  &ht RGUI F13    &kp ESC         &kp F14         &lt 4 CAPS
+                                                                              &trans      &trans    &trans  &trans
             >;
         };
 
         sym {
             bindings = <
-&kp KP_DIVIDE    &kp AMPS       &kp ASTRK        &kp LPAR        &kp DQT                      &kp BSLH   &kp GRAVE  &kp LPAR  &kp RPAR  &kp PIPE
-&ht LSHIFT RPAR  &ht LALT DLLR  &ht LCTRL PRCNT  &ht LGUI CARET  &kp TILDE                    &kp MINUS  &kp SQT    &kp LBKT  &kp RBKT  &kp EQUAL
-&kp QMARK        &kp EXCL       &kp AT           &kp HASH        &kp GRAVE                    &kp UNDER  &kp DQT    &kp LBRC  &kp RBRC  &kp PLUS
-                                                                 &trans     &trans    &trans  &trans
+&kp KP_DIVIDE  &kp AMPS       &kp ASTRK        &kp LPAR         &kp DQT                      &kp BSLH   &kp GRAVE      &kp LPAR        &kp RPAR       &kp PIPE
+&kp RPAR       &ht LALT DLLR  &ht LCTRL PRCNT  &ht LSHFT CARET  &kp TILDE                    &kp MINUS  &ht RSHFT SQT  &ht RCTRL LBKT  &ht RALT RBKT  &kp EQUAL
+&kp QMARK      &kp EXCL       &kp AT           &ht LGUI HASH    &kp GRAVE                    &kp UNDER  &ht RGUI DQT   &kp LBRC        &kp RBRC       &kp PLUS
+                                                                &trans     &trans    &trans  &trans
             >;
         };
 
         fun {
             bindings = <
-&kp KP_MULTIPLY  &kp N7       &kp N8        &kp N9       &kp PLUS                     &kp PAUSE_BREAK  &kp F7        &kp F8        &kp F9       &kp F10
-&ht LSHFT N0     &ht LALT N4  &ht LCTRL N5  &ht LGUI N6  &kp MINUS                    &kp PSCRN        &ht RSHFT F4  &ht RCTRL F5  &ht RALT F6  &ht RSHFT F11
-&kp KP_DIVIDE    &kp N1       &kp N2        &kp N3       &kp EQUAL                    &key_repeat      &kp F1        &kp F2        &kp F3       &kp F12
-                                                         &trans     &trans    &trans  &trans
+&kp KP_MULTIPLY  &kp N7       &kp N8        &kp N9        &kp PLUS                     &kp PAUSE_BREAK  &kp F7        &kp F8        &kp F9       &kp F10
+&kp KP_SLASH     &ht LALT N4  &ht LCTRL N5  &ht LSHFT N6  &kp MINUS                    &kp PSCRN        &ht RSHFT F4  &ht RCTRL F5  &ht RALT F6  &kp F11
+&kp N0           &kp N1       &kp N2        &ht LGUI N3   &kp EQUAL                    &key_repeat      &ht RGUI F1   &kp F2        &kp F3       &kp F12
+                                                          &trans     &trans    &trans  &trans
             >;
         };
 
@@ -205,9 +210,10 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        to_bt {
+        to_fun {
             if-layers = <1 2>;
-            then-layer = <4>;
+            then-layer = <3>;
         };
     };
 };
+
