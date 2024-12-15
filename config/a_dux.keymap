@@ -22,7 +22,7 @@
         nav {
             bindings = <
 &kp INS    &kp C_VOL_DN   &kp C_MUTE  &kp C_VOL_UP      &kp C_NEXT                    &kp CAPS   &kp PG_UP  &kp UP_ARROW  &kp PG_DN  &kp F14
-&sk LSHFT  &sk LALT       &sk LCTRL   &sk LSHFT         &kp C_PP                      &kp HOME   &kp LEFT   &kp DOWN      &kp RIGHT  &kp END
+&sk LGUI   &sk LALT       &sk LCTRL   &sk LSHFT         &kp C_PP                      &kp HOME   &kp LEFT   &kp DOWN      &kp RIGHT  &kp END
 &lt 4 DEL  &kp C_AC_BACK  &kp K_APP   &kp C_AC_FORWARD  &kp C_PREV                    &kp ENTER  &kp TAB    &kp BSPC      &kp ESC    &kp F13
                                                         &trans      &trans    &trans  &trans
             >;
