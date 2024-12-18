@@ -44,9 +44,9 @@
 
         sym {
             bindings = <
-&kp KP_NUMLOCK  &kp PIPE   &kp LBRC  &kp RBRC  &kp TILDE                    &kp EXCL   &kp AT     &kp HASH      &kp DLLR    &kp PRCNT
-&kp EQUAL       &kp SLASH  &kp LBKT  &kp RBKT  &kp MINUS                    &kp BSLH   &sk RSHFT  &sk RCTRL     &sk RALT    &sk RGUI
-&kp PLUS        &kp QMARK  &kp LPAR  &kp RPAR  &kp UNDER                    &kp CARET  &kp AMPS   &kp KP_COMMA  &kp KP_DOT  &kp STAR
+&kp PIPE   &kp GRAVE  &kp LBRC  &kp RBRC  &kp TILDE                    &kp EXCL   &kp AT     &kp HASH      &kp DLLR    &kp PRCNT
+&kp EQUAL  &kp SLASH  &kp LBKT  &kp RBKT  &kp MINUS                    &kp BSLH   &sk RSHFT  &sk RCTRL     &sk RALT    &sk RGUI
+&kp PLUS   &kp QMARK  &kp LPAR  &kp RPAR  &kp UNDER                    &kp CARET  &kp AMPS   &kp KP_COMMA  &kp KP_DOT  &kp STAR
                                                &trans     &trans    &trans  &trans
             >;
         };
@@ -71,9 +71,9 @@
 
         med {
             bindings = <
-&trans     &kp C_BRI_DEC  &kp C_VOL_UP  &kp C_BRI_UP  &trans                      &trans    &kp C_BRI_DEC  &kp C_VOL_UP  &kp C_BRI_UP  &trans
-&kp PSCRN  &kp C_PREV     &kp C_VOL_DN  &kp C_NEXT    &kp C_PP                    &kp C_PP  &kp C_PREV     &kp C_VOL_DN  &kp C_NEXT    &kp PSCRN
-&trans     &trans         &kp C_MUTE    &trans        &trans                      &trans    &trans         &kp C_MUTE    &trans        &trans
+&trans     &kp C_BRI_DEC  &kp C_VOL_UP  &kp C_BRI_UP  &kp KP_NUMLOCK              &kp KP_NUMLOCK  &kp C_BRI_DEC  &kp C_VOL_UP  &kp C_BRI_UP  &trans
+&kp PSCRN  &kp C_PREV     &kp C_VOL_DN  &kp C_NEXT    &kp C_PP                    &kp C_PP        &kp C_PREV     &kp C_VOL_DN  &kp C_NEXT    &kp PSCRN
+&trans     &trans         &kp C_MUTE    &trans        &trans                      &trans          &trans         &kp C_MUTE    &trans        &trans
                                                       &trans    &trans    &trans  &trans
             >;
         };
