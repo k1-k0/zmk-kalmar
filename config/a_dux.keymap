@@ -49,9 +49,9 @@
 
         sym {
             bindings = <
-&kp PIPE   &kp GRAVE  &kp LBRC  &kp RBRC  &kp TILDE                    &kp EXCL   &kp AT     &kp HASH      &kp DLLR    &kp PRCNT
-&kp EQUAL  &kp SLASH  &kp LBKT  &kp RBKT  &kp MINUS                    &kp BSLH   &sk RSHFT  &sk RCTRL     &sk RALT    &sk RGUI
-&kp PLUS   &kp QMARK  &kp LPAR  &kp RPAR  &kp UNDER                    &kp CARET  &kp AMPS   &kp KP_COMMA  &kp KP_DOT  &kp STAR
+&kp PIPE   &kp GRAVE  &kp LBRC  &kp RBRC  &kp TILDE                    &kp DLLR  &kp PERCENT  &kp CARET     &kp AMPS    &kp STAR
+&kp EQUAL  &kp SLASH  &kp LBKT  &kp RBKT  &kp MINUS                    &kp BSLH  &sk RSHFT    &sk RCTRL     &sk RALT    &sk RGUI
+&kp PLUS   &kp QMARK  &kp LPAR  &kp RPAR  &kp UNDER                    &kp EXCL  &kp AT       &kp KP_COMMA  &kp KP_DOT  &kp HASH
                                           &trans     &trans    &trans  &trans
             >;
         };
@@ -116,4 +116,3 @@
         };
     };
 };
-
