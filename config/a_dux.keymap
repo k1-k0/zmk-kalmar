@@ -76,10 +76,10 @@
 
         med {
             bindings = <
-&trans     &kp C_BRI_DEC  &kp C_VOL_UP  &kp C_BRI_UP  &trans                      &trans    &kp C_BRI_DEC  &kp C_VOL_UP  &kp C_BRI_UP  &trans
-&kp PSCRN  &kp C_PREV     &kp C_VOL_DN  &kp C_NEXT    &kp C_PP                    &kp C_PP  &kp C_PREV     &kp C_VOL_DN  &kp C_NEXT    &kp PSCRN
-&trans     &trans         &kp C_MUTE    &trans        &trans                      &trans    &trans         &kp C_MUTE    &trans        &trans
-                                                      &trans    &trans    &trans  &trans
+&trans    &trans    &trans     &trans     &trans                    &trans    &kp C_BRI_DEC  &kp C_VOL_UP  &kp C_BRI_UP  &trans
+&sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &trans                    &kp C_PP  &kp C_PREV     &kp C_VOL_DN  &kp C_NEXT    &kp PSCRN
+&trans    &trans    &trans     &trans     &trans                    &trans    &trans         &kp C_MUTE    &trans        &trans
+                                          &trans  &trans    &trans  &trans
             >;
         };
 
