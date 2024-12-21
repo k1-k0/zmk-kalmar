@@ -42,7 +42,7 @@
             bindings = <
 &kp PSCRN  &kp CAPSLOCK   &key_repeat  &caps_word        &kp ESC                      &kp ESC    &kp HOME  &kp UP_ARROW  &kp END    &kp PG_UP
 &sk LGUI   &sk LALT       &sk LCTRL    &sk LSHFT         &kp ENTER                    &kp ENTER  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PG_DN
-&kp K_APP  &kp C_AC_BACK  &kp DEL      &kp C_AC_FORWARD  &kp TAB                      &kp TAB    &kp F13   &kp BSPC      &kp F14    &kp PSCRN
+&kp K_APP  &kp C_AC_BACK  &kp DEL      &kp C_AC_FORWARD  &kp TAB                      &kp TAB    &kp F14   &kp BSPC      &kp F15    &kp PSCRN
                                                          &trans     &trans    &trans  &trans
             >;
         };
