@@ -9,6 +9,7 @@
 &sk {
     release-after-ms = <2000>;
     quick-release;
+    lazy;
 };
 
 / {
@@ -58,9 +59,9 @@
 
         num {
             bindings = <
-&kp KP_DIVIDE    &kp N7  &kp N8  &kp N9  &kp KP_PLUS                        &trans          &trans     &trans         &trans    &trans
-&kp KP_ASTERISK  &kp N4  &kp N5  &kp N6  &kp KP_SUBTRACT                    &kp KP_ENTER    &sk RSHFT  &sk RCTRL      &sk RALT  &sk RGUI
-&kp EQUAL        &kp N1  &kp N2  &kp N3  &kp N0                             &kp KP_NUMLOCK  &trans     &kp BACKSPACE  &trans    &trans
+&kp KP_DIVIDE    &kp N7  &kp N8  &kp N9  &kp KP_PLUS                        &trans          &trans     &trans        &trans      &trans
+&kp KP_ASTERISK  &kp N4  &kp N5  &kp N6  &kp KP_SUBTRACT                    &kp KP_ENTER    &sk RSHFT  &sk RCTRL     &sk RALT    &sk RGUI
+&kp EQUAL        &kp N1  &kp N2  &kp N3  &kp N0                             &kp KP_NUMLOCK  &kp BSPC   &kp KP_COMMA  &kp KP_DOT  &trans
                                          &trans           &trans    &trans  &trans
             >;
         };
