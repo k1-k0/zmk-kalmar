@@ -9,17 +9,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
+
 
 &sk {
     release-after-ms = <4000>;
     quick-release;
 };
 
-&lt {
-    tapping-term-ms = <100>;
-};
+&lt { tapping-term-ms = <100>; };
 
 / {
     combos {
@@ -27,12 +24,12 @@
 
         mo_fun {
             bindings = <&mo 4>;
-            key-positions = <30 31>;
+            key-positions = <32 33>;
         };
 
-        mo_num {
-            bindings = <&mo 3>;
-            key-positions = <33 32>;
+        mo_med {
+            bindings = <&mo 5>;
+            key-positions = <30 31>;
         };
     };
 
@@ -60,10 +57,10 @@
 
         qwe {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T                                   &kp Y           &kp U  &kp I      &kp O    &kp SQT
-&kp A  &kp S  &kp D  &kp F  &kp G                                   &kp H           &kp J  &kp K      &kp L    &kp P
-&kp Z  &kp X  &kp C  &kp V  &kp B                                   &kp N           &kp M  &kp COMMA  &kp DOT  &kp SEMI
-                            &lc 1  &kp SPACE             &kp RSHFT  &lc 2
+&kp Q  &kp W  &kp E  &kp R  &kp T                          &kp Y  &kp U  &kp I      &kp O    &kp SQT
+&kp A  &kp S  &kp D  &kp F  &kp G                          &kp H  &kp J  &kp K      &kp L    &kp P
+&kp Z  &kp X  &kp C  &kp V  &kp B                          &kp N  &kp M  &kp COMMA  &kp DOT  &kp SEMI
+                            &lc 1  &kp SPACE    &kp RSHFT  &lc 2
             >;
         };
 
@@ -71,7 +68,7 @@
             bindings = <
 &kp INS    &kp CAPSLOCK  &key_repeat  &caps_word  &kp ESC                      &kp ESC    &kp HOME  &kp UP_ARROW  &kp END    &kp PG_UP
 &sk LGUI   &sk LALT      &sk LCTRL    &sk LSHFT   &kp ENTER                    &kp ENTER  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PG_DN
-&kp PSCRN  &mo 6         &kp DEL      &kp K_APP   &kp TAB                      &kp TAB    &kp F14   &kp BSPC      &kp F15    &kp PSCRN
+&kp PSCRN  &mo 7         &kp DEL      &kp K_APP   &kp TAB                      &kp TAB    &kp F14   &kp BSPC      &kp F15    &kp PSCRN
                                                   &trans     &trans    &trans  &trans
             >;
         };
@@ -87,19 +84,19 @@
 
         num {
             bindings = <
-&kp KP_DIVIDE    &kp N7  &kp N8  &kp N9  &kp KP_PLUS                        &trans          &trans     &trans        &trans      &trans
-&kp KP_ASTERISK  &kp N4  &kp N5  &kp N6  &kp KP_SUBTRACT                    &kp KP_ENTER    &sk RSHFT  &sk RCTRL     &sk RALT    &sk RGUI
-&kp EQUAL        &kp N1  &kp N2  &kp N3  &kp N0                             &kp KP_NUMLOCK  &kp BSPC   &kp KP_COMMA  &kp KP_DOT  &trans
+&kp KP_DIVIDE    &kp N7  &kp N8  &kp N9  &kp KP_PLUS                        &trans          &kp PERCENT  &kp LPAR      &kp RPAR    &kp UNDER
+&kp KP_ASTERISK  &kp N4  &kp N5  &kp N6  &kp KP_SUBTRACT                    &kp KP_ENTER    &sk RSHFT    &sk RCTRL     &sk RALT    &sk RGUI
+&kp EQUAL        &kp N1  &kp N2  &kp N3  &kp N0                             &kp KP_NUMLOCK  &kp BSPC     &kp KP_COMMA  &kp KP_DOT  &trans
                                          &trans           &trans    &trans  &trans
             >;
         };
 
         fun {
             bindings = <
-&trans    &trans    &trans     &trans     &trans                     &kp F12  &kp F7  &kp F8  &kp F9  &kp PAUSE_BREAK
-&sk LGUI  &sk LALT  &sk LCTRL  &sk LSHFT  &kp INS                    &kp F11  &kp F5  &kp F6  &kp F7  &kp PSCRN
-&trans    &trans    &trans     &trans     &trans                     &kp F10  &kp F1  &kp F2  &kp F3  &kp SCROLLLOCK
-                                          &trans   &trans    &trans  &trans
+&kp PAUSE_BREAK  &kp F7  &kp F8  &kp F9  &kp F12                    &trans   &trans     &trans     &trans    &trans
+&kp PSCRN        &kp F4  &kp F5  &kp F6  &kp F11                    &kp INS  &sk RSHFT  &sk RCTRL  &sk RALT  &sk RGUI
+&kp SLCK         &kp F1  &kp F2  &kp F3  &kp F10                    &trans   &trans     &trans     &trans    &trans
+                                         &trans   &trans    &trans  &trans
             >;
         };
 
@@ -112,21 +109,21 @@
             >;
         };
 
+        ble {
+            bindings = <
+&bt BT_CLR_ALL  &bootloader   &trans        &sys_reset    &bt BT_CLR                      &bt BT_CLR    &sys_reset    &trans        &bootloader   &bt BT_CLR_ALL
+&bt BT_SEL 4    &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans          &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans                          &trans        &out OUT_BLE  &out OUT_USB  &out OUT_TOG  &trans
+                                                          &trans        &trans    &trans  &trans
+            >;
+        };
+
         mou {
             bindings = <
 &trans  &trans  &trans    &trans    &trans                      &trans          &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans
 &trans  &trans  &mkp MB4  &mkp MB5  &trans                      &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT
 &trans  &trans  &mkp MB1  &mkp MB2  &mkp MB3                    &trans          &trans          &trans          &trans           &trans
                                     &trans    &trans    &trans  &trans
-            >;
-        };
-
-        bt {
-            bindings = <
-&bt BT_CLR_ALL  &bootloader   &trans        &sys_reset    &bt BT_CLR                      &bt BT_CLR    &sys_reset    &trans        &bootloader   &bt BT_CLR_ALL
-&bt BT_SEL 4    &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans          &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans                          &trans        &out OUT_BLE  &out OUT_USB  &out OUT_TOG  &trans
-                                                          &trans        &trans    &trans  &trans
             >;
         };
 
@@ -143,14 +140,14 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        mo_med {
+        mo_num {
             if-layers = <1 2>;
-            then-layer = <5>;
+            then-layer = <3>;
         };
 
         mo_ble {
-            if-layers = <3 4>;
-            then-layer = <7>;
+            if-layers = <4 5>;
+            then-layer = <6>;
         };
     };
 };
