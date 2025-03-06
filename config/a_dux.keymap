@@ -8,14 +8,26 @@
 
 / {
     behaviors {
-        ht: hold_tap {
+        lpht: left_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33>;    // <---[[right-hand keys]]
+        };
+
+        rpht: right_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31>;    // <---[[left-hand keys]]
         };
     };
 
@@ -141,19 +153,19 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W       &kp E        &kp R        &kp T                                     &kp Y       &kp U        &kp I        &kp O       &kp P
-&ht LGUI A  &ht LALT S  &ht LCTRL D  &ht LSHFT F  &lt 3 G                                   &lt 3 H     &ht RSHFT J  &ht RCTRL K  &ht RALT L  &ht RGUI SEMI
-&kp Z       &kp X       &lt 1 C      &lt 2 V      &kp B                                     &kp N       &lt 2 M      &lt 1 COMMA  &kp DOT     &kp FSLH
-                                                  &lt 1 SPACE  &lt 2 ENTER    &lt 2 ESCAPE  &lt 1 BSPC
+&kp Q         &kp W         &kp E          &kp R          &kp T                                     &kp Y       &kp U          &kp I          &kp O         &kp P
+&lpht LGUI A  &lpht LALT S  &lpht LCTRL D  &lpht LSHFT F  &lt 3 G                                   &lt 3 H     &rpht RSHFT J  &rpht RCTRL K  &rpht RALT L  &rpht RGUI SEMI
+&kp Z         &kp X         &lt 1 C        &lt 2 V        &kp B                                     &kp N       &lt 2 M        &lt 1 COMMA    &kp DOT       &kp FSLH
+                                                          &lt 1 SPACE  &lt 2 ENTER    &lt 2 ESCAPE  &lt 1 BSPC
             >;
         };
 
         lower_layer {
             bindings = <
-&kp FSLH              &kp N7       &kp N8        &kp N9        &kp PLUS                     &kp CAPS    &kp PG_UP       &kp UP          &kp PG_DN       &kp INS
-&ht LGUI KP_MULTIPLY  &ht LALT N4  &ht LCTRL N5  &ht LSHFT N6  &kp MINUS                    &kp HOME    &ht RSHFT LEFT  &ht RCTRL DOWN  &ht RALT RIGHT  &ht RGUI END
-&kp N0                &kp N1       &kp N2        &kp N3        &kp EQUAL                    &caps_word  &kp DEL         &kp TAB         &kp K_APP       &kp PSCRN
-                                                               &trans     &trans    &trans  &trans
+&kp FSLH                  &kp N7           &kp N8            &kp N9            &kp PLUS                     &kp CAPS    &kp PG_UP         &kp UP            &kp PG_DN         &kp INS
+&lpht LGUI KP_MULTIPLY  &lpht LALT N4  &lpht LCTRL N5  &lpht LSHFT N6  &kp MINUS                    &kp HOME    &rpht RSHFT LEFT  &rpht RCTRL DOWN  &rpht RALT RIGHT  &rpht RGUI END
+&kp N0                    &kp N1           &kp N2            &kp N3            &kp EQUAL                    &caps_word  &kp DEL           &kp TAB           &kp K_APP         &kp PSCRN
+                                                                               &trans     &trans    &trans  &trans
             >;
         };
 
@@ -168,10 +180,10 @@
 
         adjust_layer {
             bindings = <
-&out OUT_BLE    &kp F7       &kp F8        &kp F9        &kp F10                    &kp PAUSE_BREAK  &kp C_BRI_UP      &kp C_VOL_UP        &kp C_BRI_DN     &out OUT_BLE
-&ht LGUI PSCRN  &ht LALT F4  &ht LCTRL F5  &ht LSHFT F6  &kp F11                    &kp INS          &ht RSHFT C_PREV  &ht RCTRL C_VOL_DN  &ht RALT C_NEXT  &ht RGUI PSCRN
-&out OUT_USB    &kp F1       &kp F2        &kp F3        &kp F12                    &key_repeat      &kp C_STOP        &kp C_MUTE          &kp C_PP         &out OUT_USB
-                                                         &trans   &trans    &trans  &trans
+&out OUT_BLE      &kp F7         &kp F8          &kp F9          &kp F10                    &kp PAUSE_BREAK  &kp C_BRI_UP        &kp C_VOL_UP          &kp C_BRI_DN       &out OUT_BLE
+&lpht LGUI PSCRN  &lpht LALT F4  &lpht LCTRL F5  &lpht LSHFT F6  &kp F11                    &kp INS          &rpht RSHFT C_PREV  &rpht RCTRL C_VOL_DN  &rpht RALT C_NEXT  &rpht RGUI PSCRN
+&out OUT_USB      &kp F1         &kp F2          &kp F3          &kp F12                    &key_repeat      &kp C_STOP          &kp C_MUTE            &kp C_PP           &out OUT_USB
+                                                                 &trans   &trans    &trans  &trans
             >;
         };
 
