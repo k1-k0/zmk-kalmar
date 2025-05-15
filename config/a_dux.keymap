@@ -12,6 +12,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             flavor = "balanced";
             tapping-term-ms = <160>;
             quick-tap-ms = <160>;
@@ -24,6 +25,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             flavor = "balanced";
             tapping-term-ms = <160>;
             quick-tap-ms = <160>;
@@ -164,10 +166,10 @@
 
         lower_layer {
             bindings = <
-&kp FSLH                  &kp N7           &kp N8            &kp N9            &kp PLUS                     &kp CAPS    &kp PG_UP         &kp UP            &kp PG_DN         &kp INS
+&kp FSLH                &kp N7         &kp N8          &kp N9          &kp PLUS                     &kp CAPS    &kp PG_UP         &kp UP            &kp PG_DN         &kp INS
 &lpht LGUI KP_MULTIPLY  &lpht LALT N4  &lpht LCTRL N5  &lpht LSHFT N6  &kp MINUS                    &kp HOME    &rpht RSHFT LEFT  &rpht RCTRL DOWN  &rpht RALT RIGHT  &rpht RGUI END
-&kp N0                    &kp N1           &kp N2            &kp N3            &kp EQUAL                    &caps_word  &kp DEL           &kp TAB           &kp K_APP         &kp PSCRN
-                                                                               &trans     &trans    &trans  &trans
+&kp N0                  &kp N1         &kp N2          &kp N3          &kp EQUAL                    &caps_word  &kp DEL           &kp TAB           &kp K_APP         &kp PSCRN
+                                                                       &trans     &trans    &trans  &trans
             >;
         };
 
@@ -182,19 +184,19 @@
 
         adjust_layer {
             bindings = <
-&out OUT_BLE      &kp F7         &kp F8          &kp F9          &kp F10                    &kp PAUSE_BREAK  &kp C_BRI_UP        &kp C_VOL_UP          &kp C_BRI_DN       &out OUT_BLE
+&kp F15           &kp F7         &kp F8          &kp F9          &kp F10                    &kp PAUSE_BREAK  &kp C_BRI_UP        &kp C_VOL_UP          &kp C_BRI_DN       &kp F15
 &lpht LGUI PSCRN  &lpht LALT F4  &lpht LCTRL F5  &lpht LSHFT F6  &kp F11                    &kp INS          &rpht RSHFT C_PREV  &rpht RCTRL C_VOL_DN  &rpht RALT C_NEXT  &rpht RGUI PSCRN
-&out OUT_USB      &kp F1         &kp F2          &kp F3          &kp F12                    &key_repeat      &kp C_STOP          &kp C_MUTE            &kp C_PP           &out OUT_USB
+&kp F14           &kp F1         &kp F2          &kp F3          &kp F12                    &key_repeat      &kp C_STOP          &kp C_MUTE            &kp C_PP           &kp F14
                                                                  &trans   &trans    &trans  &trans
             >;
         };
 
         bt_layer {
             bindings = <
-&bootloader     &sys_reset  &trans  &bt BT_SEL 0  &bt BT_SEL 1                    &bt BT_SEL 1  &bt BT_SEL 0  &trans  &sys_reset  &bootloader
-&trans          &bt BT_CLR  &trans  &trans        &bt BT_SEL 2                    &bt BT_SEL 2  &trans        &trans  &bt BT_CLR  &trans
-&bt BT_CLR_ALL  &trans      &trans  &bt BT_SEL 4  &bt BT_SEL 3                    &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans      &bt BT_CLR_ALL
-                                                  &trans        &trans    &trans  &trans
+&bootloader     &sys_reset  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1                    &bt BT_SEL 1  &bt BT_SEL 0  &out OUT_BLE  &sys_reset  &bootloader
+&trans          &bt BT_CLR  &out OUT_TOG  &trans        &bt BT_SEL 2                    &bt BT_SEL 2  &trans        &out OUT_TOG  &bt BT_CLR  &trans
+&bt BT_CLR_ALL  &trans      &out OUT_USB  &bt BT_SEL 4  &bt BT_SEL 3                    &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_USB  &trans      &bt BT_CLR_ALL
+                                                        &trans        &trans    &trans  &trans
             >;
         };
 
