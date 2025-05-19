@@ -174,16 +174,18 @@
             key-positions = <30 33>;
         };
 
-        lf16 {
-            bindings = <&kp F16>;
-            key-positions = <12 22>;
+        lhyper {
+            bindings = <&sk LA(LC(LS(LGUI)))>;
+            key-positions = <13 14>;
             timeout-ms = <30>;
+            require-prior-idle-ms = <125>;
         };
 
-        rf16 {
-            bindings = <&kp F16>;
-            key-positions = <17 27>;
+        rhyper {
+            bindings = <&sk RS(RC(RA(RGUI)))>;
+            key-positions = <15 16>;
             timeout-ms = <30>;
+            require-prior-idle-ms = <125>;
         };
     };
 
@@ -203,7 +205,7 @@
             bindings = <
 &kp FSLH                &kp N7         &kp N8          &kp N9          &kp PLUS                     &kp CAPS    &kp PG_UP         &kp UP            &kp PG_DN         &kp PSCRN
 &lpht LGUI KP_MULTIPLY  &lpht LALT N4  &lpht LCTRL N5  &lpht LSHFT N6  &kp MINUS                    &kp HOME    &rpht RSHFT LEFT  &rpht RCTRL DOWN  &rpht RALT RIGHT  &rpht RGUI END
-&kp N0                  &kp N1         &kp N2          &kp N3          &kp EQUAL                    &caps_word  &kp DEL           &kp TAB           &kp K_APP         &kp F16
+&kp N0                  &kp N1         &kp N2          &kp N3          &kp EQUAL                    &caps_word  &kp DEL           &kp TAB           &kp K_APP         &sk LS(LA(LC(LGUI)))
                                                                        &trans     &trans    &trans  &trans
             >;
         };
