@@ -61,7 +61,7 @@
             bindings = <
 &kp INS          &kp CAPSLOCK  &key_repeat  &caps_word            &kp ESC                      &kp ESC    &kp HOME  &kp UP_ARROW  &kp END    &kp PSCRN
 &sk LGUI         &sk LALT      &sk LCTRL    &sk LSHFT             &kp ENTER                    &kp ENTER  &kp LEFT  &kp DOWN      &kp RIGHT  &kp PG_UP
-&kp PAUSE_BREAK  &kp K_APP     &kp DEL      &kp LS(LA(LC(LGUI)))  &kp TAB                      &kp TAB    &kp F14   &kp BSPC      &kp F15    &kp PG_DN
+&kp PAUSE_BREAK  &kp K_APP     &kp DEL      &sk LS(LA(LC(LGUI)))  &kp TAB                      &kp TAB    &kp F14   &kp BSPC      &kp F15    &kp PG_DN
                                                                   &trans     &trans    &trans  &trans
             >;
         };
