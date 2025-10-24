@@ -42,6 +42,18 @@
         };
     };
 
+    app_swap: app_swapper {
+        compatible = "zmk,behavior-tri-state";
+        #binding-cells = <0>;
+        bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+    };
+
+    win_swap: win_swapper {
+        compatible = "zmk,behavior-tri-state";
+        #binding-cells = <0>;
+        bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -212,7 +224,7 @@
             bindings = <
 &kp FSLH                &kp N7         &kp N8          &kp N9          &kp PLUS                     &kp CAPS    &kp PG_UP         &kp UP            &kp PG_DN         &kp PSCRN
 &lpht LGUI KP_MULTIPLY  &lpht LALT N4  &lpht LCTRL N5  &lpht LSHFT N6  &kp MINUS                    &kp HOME    &rpht RSHFT LEFT  &rpht RCTRL DOWN  &rpht RALT RIGHT  &rpht RGUI END
-&kp N0                  &kp N1         &kp N2          &kp N3          &kp EQUAL                    &caps_word  &kp DEL           &kp TAB           &kp K_APP         &sk LS(LA(LC(LGUI)))
+&kp N0                  &kp N1         &kp N2          &kp N3          &kp EQUAL                    &caps_word  &kp DEL           &kp TAB           &app_swap         &kp K_APP
                                                                        &trans     &trans    &trans  &trans
             >;
         };
