@@ -54,7 +54,7 @@
         ignored-key-positions = <2 16 17 18 19>;
     };
 
-    win_swap: win_swapper {
+    appw_swap: app_win_swapper {
         compatible = "zmk,behavior-tri-state";
         #binding-cells = <0>;
         bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
@@ -235,10 +235,10 @@
 
         nav {
             bindings = <
-&trans    &trans    &kp LS(TAB)    &win_swap  &trans                    &kp CAPS      &kp BSPC          &kp UP            &kp DEL           &kp ENTER
-&sk LGUI  &sk LALT  &sk LCTRL      &sk LSHFT  &trans                    &kp HOME      &rpht RSHFT LEFT  &rpht RCTRL DOWN  &rpht RALT RIGHT  &rpht RGUI END
-&trans    &trans    &kp LS(GRAVE)  &app_swap  &trans                    &caps_word    &kp PG_UP         &kp TAB           &kp PG_DN         &kp K_APP
-                                              &trans  &trans    &trans  &kp K_CANCEL
+&trans    &trans    &kp LS(TAB)    &app_swap   &trans                    &kp CAPS      &kp BSPC          &kp UP            &kp DEL           &kp ENTER
+&sk LGUI  &sk LALT  &sk LCTRL      &sk LSHFT   &trans                    &kp HOME      &rpht RSHFT LEFT  &rpht RCTRL DOWN  &rpht RALT RIGHT  &rpht RGUI END
+&trans    &trans    &kp LS(GRAVE)  &appw_swap  &trans                    &caps_word    &kp PG_UP         &kp TAB           &kp PG_DN         &kp K_APP
+                                               &trans  &trans    &trans  &kp K_CANCEL
             >;
         };
 
