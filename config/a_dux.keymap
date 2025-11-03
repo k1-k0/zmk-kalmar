@@ -76,8 +76,7 @@
         compatible = "zmk,behavior-tri-state";
         #binding-cells = <0>;
         bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-
-        ignored-key-positions = <22 16 17 18 19>;
+        ignored-key-positions = <26 16 17 18 19>;
     };
 
     combos {
