@@ -9,6 +9,8 @@
 #define RPI_MS 175
 #define VCMB_MS 45
 #define HCMB_MS 30
+#define LHYPER LA(LC(LS(LGUI)))
+#define RHYPER RS(RC(RA(RGUI)))
 
 &lt {
     tapping-term-ms = <180>;
@@ -231,14 +233,14 @@
         };
 
         c_lhyper {
-            bindings = <&sk LA(LC(LS(LGUI)))>;
+            bindings = <&sk LHYPER>;
             key-positions = <14 12>;
             require-prior-idle-ms = <RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
 
         c_rhyper {
-            bindings = <&sk RS(RC(RA(RGUI)))>;
+            bindings = <&sk RHYPER>;
             key-positions = <15 17>;
             require-prior-idle-ms = <RPI_MS>;
             timeout-ms = <HCMB_MS>;
@@ -317,10 +319,10 @@
 
         nav {
             bindings = <
-&trans    &kp ESC               &kp LS(TAB)    &app_swap   &kp CAPS                      &kp PG_UP     &kp BSPC          &kp UP            &kp DEL           &kp ENTER
-&sk LGUI  &sk LALT              &sk LCTRL      &sk LSHFT   &caps_word                    &kp HOME      &rpht RSHFT LEFT  &rpht RCTRL DOWN  &rpht RALT RIGHT  &rpht RGUI END
-&trans    &sk LS(LA(LC(LGUI)))  &kp LS(GRAVE)  &appw_swap  &trans                        &kp PG_DN     &kp LS(TAB)       &kp TAB           &tbbr             &kp K_APP
-                                                           &trans      &trans    &trans  &kp K_CANCEL
+&trans    &kp ESC    &kp LS(TAB)    &app_swap   &kp CAPS                      &kp PG_UP     &kp BSPC          &kp UP            &kp DEL           &kp ENTER
+&sk LGUI  &sk LALT   &sk LCTRL      &sk LSHFT   &caps_word                    &kp HOME      &rpht RSHFT LEFT  &rpht RCTRL DOWN  &rpht RALT RIGHT  &rpht RGUI END
+&trans    &sk LHYPER &kp LS(GRAVE)  &appw_swap  &trans                        &kp PG_DN     &kp LS(TAB)       &kp TAB           &tbbr             &kp K_APP
+                                                &trans      &trans    &trans  &kp K_CANCEL
             >;
         };
 
