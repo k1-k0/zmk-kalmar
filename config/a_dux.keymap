@@ -54,48 +54,6 @@
             tapping-term-ms = <200>;
             bindings = <&sk RSHFT>, <&caps_word>;
         };
-
-        mgt: morph_greater_than {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COLON>, <&kp GT>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        mdot: morph_dot {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&mgt>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        mlt: morph_less_than {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp SEMI>, <&kp LT>;
-            mods = <(MOD_LCTL)>;
-        };
-        
-        mcmm: morph_comma {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&mlt>;
-            mods = <(MOD_RSFT)>;
-        };
-    
-        mlpar: morph_lpar_lt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp LT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mrpar: morph_rpar_gt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp GT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     app_swap: app_swapper {
@@ -139,14 +97,14 @@
         };
 
         c_lpar {
-            bindings = <&mlpar>;
+            bindings = <&kp LPAR>;
             key-positions = <3 13>;
             require-prior-idle-ms = <RPI_MS>;
             timeout-ms = <VCMB_MS>;
         };
 
         c_rpar {
-            bindings = <&mrpar>;
+            bindings = <&kp RPAR>;
             key-positions = <6 16>;
             require-prior-idle-ms = <RPI_MS>;
             timeout-ms = <VCMB_MS>;
@@ -327,8 +285,8 @@
         base {
             bindings = <
 &kp Q         &kp W         &kp E          &kp R          &kp T                              &kp Y   &kp U          &kp I          &kp O         &kp P
-&lpht LGUI A  &lpht LALT S  &lpht LCTRL D  &lpht LSHFT F  &kp G                              &kp H   &rpht RSHFT J  &rpht RCTRL K  &rpht RALT L  &rpht RGUI SQT
-&kp Z         &kp X         &kp C          &kp V          &kp B                              &kp N   &kp M          &mcmm          &mdot         &kp FSLH
+&lpht LGUI A  &lpht LALT S  &lpht LCTRL D  &lpht LSHFT F  &kp G                              &kp H   &rpht RSHFT J  &rpht RCTRL K  &rpht RALT L  &rpht RGUI SEMI
+&kp Z         &kp X         &kp C          &kp V          &kp B                              &kp N   &kp M          &kp COMMA      &kp DOT       &kp FSLH
                                                           &lt 2 SPACE  &lt 3 ENTER    &sl 1  &mshft
             >;
         };
