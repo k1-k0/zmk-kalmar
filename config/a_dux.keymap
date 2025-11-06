@@ -8,10 +8,10 @@
 
 #define HMR_RPI_MS 175
 #define CMB_RPI_MS 140
-#define VCMB_MS 45
-#define HCMB_MS 30
+#define VCMB_MS 35
+#define HCMB_MS 25
 #define TCMB_RPI_MS 130
-#define TCMB_MS 45
+#define TCMB_MS 25
 #define LHYPER LA(LC(LS(LGUI)))
 #define RHYPER RS(RC(RA(RGUI)))
 
