@@ -8,6 +8,7 @@
 
 #define HMR_RPI_MS 175
 #define COMBO_RPI_MS 140
+#define TCMB_MS 50
 #define VCMB_MS 45
 #define HCMB_MS 30
 #define LHYPER LA(LC(LS(LGUI)))
@@ -93,65 +94,30 @@
             timeout-ms = <HCMB_MS>;
         };
 
-        c_equal2 {
-            bindings = <&kp EQUAL>;
-            key-positions = <1 11>;
-            timeout-ms = <VCMB_MS>;
+        c_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <2 3>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
+            timeout-ms = <HCMB_MS>;
         };
 
-        c_lbkt2 {
-            bindings = <&kp LBKT>;
-            key-positions = <2 12>;
-            require-prior-idle-ms = <COMBO_RPI_MS>;
-            timeout-ms = <VCMB_MS>;
-        };
-
-        c_lpar {
-            bindings = <&kp LPAR>;
-            key-positions = <3 13>;
-            require-prior-idle-ms = <COMBO_RPI_MS>;
-            timeout-ms = <VCMB_MS>;
-        };
-
-        c_rpar {
-            bindings = <&kp RPAR>;
-            key-positions = <6 16>;
-            require-prior-idle-ms = <COMBO_RPI_MS>;
-            timeout-ms = <VCMB_MS>;
-        };
-
-        c_rbkt2 {
-            bindings = <&kp RBKT>;
-            key-positions = <7 17>;
-            require-prior-idle-ms = <COMBO_RPI_MS>;
-            timeout-ms = <VCMB_MS>;
-        };
-
-        c_minus2 {
-            bindings = <&kp MINUS>;
-            key-positions = <8 18>;
-            timeout-ms = <VCMB_MS>;
-            require-prior-idle-ms = <COMBO_RPI_MS>;
-        };
-
-        c_bspc {
-            bindings = <&kp BSPC>;
+        c_tab {
+            bindings = <&kp TAB>;
             key-positions = <6 7>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
 
-        c_del {
-            bindings = <&kp DEL>;
+        c_caps {
+            bindings = <&kp CAPS>;
             key-positions = <7 8>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
 
-        c_f14 {
-            bindings = <&kp F14>;
-            key-positions = <12 30>;
+        c_bslh {
+            bindings = <&kp BSLH>;
+            key-positions = <11 12>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
@@ -163,15 +129,29 @@
             timeout-ms = <HCMB_MS>;
         };
 
-        c_minus {
-            bindings = <&kp MINUS>;
+        c_lbkt {
+            bindings = <&kp LBKT>;
             key-positions = <12 13>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
 
-        c_bslh {
-            bindings = <&kp BSLH>;
+        c_f14 {
+            bindings = <&kp F14>;
+            key-positions = <12 30>;
+            require-prior-idle-ms = <COMBO_RPI_MS>;
+            timeout-ms = <TCMB_MS>;
+        };
+
+        c_rbkt {
+            bindings = <&kp RBKT>;
+            key-positions = <16 17>;
+            require-prior-idle-ms = <COMBO_RPI_MS>;
+            timeout-ms = <HCMB_MS>;
+        };
+
+        c_minus {
+            bindings = <&kp MINUS>;
             key-positions = <16 18>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
@@ -179,7 +159,7 @@
 
         c_fslh {
             bindings = <&kp FSLH>;
-            key-positions = <16 17>;
+            key-positions = <17 18>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
@@ -188,32 +168,32 @@
             bindings = <&kp F15>;
             key-positions = <17 33>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
-            timeout-ms = <HCMB_MS>;
+            timeout-ms = <TCMB_MS>;
         };
 
-        c_grave {
-            bindings = <&kp GRAVE>;
+        c_del {
+            bindings = <&kp DEL>;
             key-positions = <21 22>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
 
-        c_lbkt {
-            bindings = <&kp LBKT>;
+        c_lpar {
+            bindings = <&kp LPAR>;
             key-positions = <22 23>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
 
-        c_rbkt {
-            bindings = <&kp RBKT>;
+        c_rpar {
+            bindings = <&kp RPAR>;
             key-positions = <26 27>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
 
-        c_tab {
-            bindings = <&kp TAB>;
+        c_bspc {
+            bindings = <&kp BSPC>;
             key-positions = <27 28>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
@@ -235,7 +215,7 @@
 
         c_lhyper {
             bindings = <&sk LHYPER>;
-            key-positions = <14 12>;
+            key-positions = <12 14>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
@@ -243,6 +223,20 @@
         c_rhyper {
             bindings = <&sk RHYPER>;
             key-positions = <15 17>;
+            require-prior-idle-ms = <COMBO_RPI_MS>;
+            timeout-ms = <HCMB_MS>;
+        };
+
+        c_lhyper2 {
+            bindings = <&sk LHYPER>;
+            key-positions = <12 23>;
+            require-prior-idle-ms = <COMBO_RPI_MS>;
+            timeout-ms = <HCMB_MS>;
+        };
+
+        c_rhyper2 {
+            bindings = <&sk RHYPER>;
+            key-positions = <18 25>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
