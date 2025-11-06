@@ -236,7 +236,7 @@
 
         c_rhyper2 {
             bindings = <&sk RHYPER>;
-            key-positions = <18 25>;
+            key-positions = <17 26>;
             require-prior-idle-ms = <COMBO_RPI_MS>;
             timeout-ms = <HCMB_MS>;
         };
