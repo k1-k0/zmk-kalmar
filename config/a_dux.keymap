@@ -246,14 +246,14 @@
             bindings = <&sk LHYPER>;
             key-positions = <12 23>;
             require-prior-idle-ms = <CMB_RPI_MS>;
-            timeout-ms = <HCMB_MS>;
+            timeout-ms = <VCMB_MS>;
         };
 
         c_rhyper2 {
             bindings = <&sk RHYPER>;
             key-positions = <17 26>;
             require-prior-idle-ms = <CMB_RPI_MS>;
-            timeout-ms = <HCMB_MS>;
+            timeout-ms = <VCMB_MS>;
         };
 
         c_cut {
