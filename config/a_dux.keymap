@@ -15,7 +15,7 @@
 #define LHYPER LA(LC(LS(LGUI)))
 #define RHYPER RS(RC(RA(RGUI)))
 
-#define MSHFT &mshft2 RSHFT 0
+#define MSHFT &mshft RSHFT 0
 
 &lt {
     tapping-term-ms = <180>;
@@ -55,24 +55,17 @@
             hold-trigger-on-release;
         };
 
-        mshft: magic_shift {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk RSHFT>, <&caps_word>;
-        };
-
-        mshft_tap: magic_shift_tap {
+        mshftm: magic_shift_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&sk RSHFT>, <&caps_word>;
             mods = <(MOD_RSFT)>;
         };
 
-        mshft2: magic_shift_2 {
+        mshft: magic_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&kp>, <&mshft_tap>;
+            bindings = <&kp>, <&mshftm>;
 
             flavor = "balanced";
             tapping-term-ms = <200>;
