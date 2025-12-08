@@ -127,7 +127,7 @@
         c_rhyper    { bindings = <&sk RHYPER>;    key-positions = <15 17>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_lhyper2   { bindings = <&sk LHYPER>;    key-positions = <12 23>; require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
         c_rhyper2   { bindings = <&sk RHYPER>;    key-positions = <17 26>; require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
-        # Symbols
+
         c_excl      { bindings = <&kp EXCL>;      key-positions = <1 11>;  require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
         c_at        { bindings = <&kp AT>;        key-positions = <2 12>;  require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
         c_hash      { bindings = <&kp HASH>;      key-positions = <3 13>;  require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
@@ -136,7 +136,7 @@
         c_caret     { bindings = <&kp CARET>;     key-positions = <6 16>;  require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
         c_amps      { bindings = <&kp AMPS>;      key-positions = <7 17>;  require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
         c_star      { bindings = <&kp STAR>;      key-positions = <8 18>;  require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
-        # Operations
+
         c_cut       { bindings = <&kp LG(X)>;     key-positions = <11 21>; require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
         c_copy      { bindings = <&kp LG(C)>;     key-positions = <12 22>; require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
         c_paste     { bindings = <&kp LG(V)>;     key-positions = <13 23>; require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
