@@ -121,8 +121,8 @@
         c_rbkt      { bindings = <&kp RBKT>;      key-positions = <26 27>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_bspc      { bindings = <&kp BSPC>;      key-positions = <27 28>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_f15e      { bindings = <&kp F15>;       key-positions = <26 28>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
-        c_lgame     { bindings = <&tog 5>;        key-positions = <20 24>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
-        c_rgame     { bindings = <&tog 5>;        key-positions = <25 29>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
+        c_lgame     { bindings = <&tog 6>;        key-positions = <20 24>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
+        c_rgame     { bindings = <&tog 6>;        key-positions = <25 29>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_lhyper    { bindings = <&sk LHYPER>;    key-positions = <12 14>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_rhyper    { bindings = <&sk RHYPER>;    key-positions = <15 17>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_lhyper2   { bindings = <&sk LHYPER>;    key-positions = <12 23>; require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
@@ -151,7 +151,7 @@
             bindings = <
 &kp Q         &kp W         &kp E          &kp R          &kp T                              &kp Y   &kp U          &kp I          &kp O         &kp P
 &lpht LGUI A  &lpht LALT S  &lpht LCTRL D  &lpht LSHFT F  &kp G                              &kp H   &rpht RSHFT J  &rpht RCTRL K  &rpht RALT L  &rpht RGUI SEMI
-&kp Z         &kp X         &kp C          &kp V          &kp B                              &kp N   &kp M          &kp COMMA      &kp DOT       &kp SQT
+&lt 5 Z       &kp X         &kp C          &kp V          &kp B                              &kp N   &kp M          &kp COMMA      &kp DOT       &kp SQT
                                                           &lt 2 SPACE  &lt 3 ENTER    &sl 1  MSHFT
             >;
         };
@@ -167,9 +167,9 @@
 
         nav {
             bindings = <
-&trans    &kp ESC     &kp LS(TAB)    &app_swap   &kp CAPS                      &kp PG_UP     &kp LS(TAB)       &kp UP            &tbbr             &kp ENTER
-&sk LGUI  &sk LALT    &sk LCTRL      &sk LSHFT   &caps_word                    &kp HOME      &rpht RSHFT LEFT  &rpht RCTRL DOWN  &rpht RALT RIGHT  &rpht RGUI END
-&trans    &sk LHYPER  &kp LS(GRAVE)  &appw_swap  &trans                        &kp PG_DN     &kp BSPC          &kp TAB           &kp DEL           &kp K_APP
+&trans    &kp ESC     &kp LS(TAB)    &app_swap   &kp CAPS                      &kp HOME      &kp PG_DN         &kp PG_UP       &kp END           &kp ENTER
+&sk LGUI  &sk LALT    &sk LCTRL      &sk LSHFT   &caps_word                    &kp LEFT      &rpht RSHFT DOWN  &rpht RCTRL UP  &rpht RALT RIGHT  &rpht RGUI TAB
+&trans    &sk LHYPER  &kp LS(GRAVE)  &appw_swap  &trans                        &kp LS(TAB)   &tbbr             &kp BSPC        &kp DEL           &kp K_APP
                                                  &trans      &trans    &trans  &kp K_CANCEL
             >;
         };
@@ -189,6 +189,15 @@
 &trans          &bt BT_CLR  &out OUT_TOG  &trans        &bt BT_SEL 2                    &bt BT_SEL 2  &trans        &out OUT_TOG  &bt BT_CLR  &trans
 &bt BT_CLR_ALL  &trans      &out OUT_USB  &bt BT_SEL 4  &bt BT_SEL 3                    &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_USB  &trans      &bt BT_CLR_ALL
                                                         &trans        &trans    &trans  &trans
+            >;
+        };
+
+        mou {
+            bindings = <
+&trans  &trans   &trans    &trans    &trans                      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &trans
+&trans  &mkp MB1 &mkp MB2  &mkp MB3  &trans                      &msc MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
+&trans  &trans   &mkp MB4  &mkp MB5  &trans                      &trans          &trans          &trans          &trans           &trans
+                                    &trans    &trans    &trans  &trans
             >;
         };
 
