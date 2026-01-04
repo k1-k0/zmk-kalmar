@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define QT_MS 180
 #define HMR_RPI_MS 175
@@ -122,8 +121,8 @@
         c_rbkt      { bindings = <&kp RBKT>;      key-positions = <26 27>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_bspc      { bindings = <&kp BSPC>;      key-positions = <27 28>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_f15e      { bindings = <&kp F15>;       key-positions = <26 28>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
-        c_lgame     { bindings = <&tog 6>;        key-positions = <20 24>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
-        c_rgame     { bindings = <&tog 6>;        key-positions = <25 29>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
+        c_lgame     { bindings = <&tog 5>;        key-positions = <20 24>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
+        c_rgame     { bindings = <&tog 5>;        key-positions = <25 29>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_lhyper    { bindings = <&sk LHYPER>;    key-positions = <12 14>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_rhyper    { bindings = <&sk RHYPER>;    key-positions = <15 17>; require-prior-idle-ms = <HCMB_RPI_MS>;  timeout-ms = <HCMB_MS>; };
         c_lhyper2   { bindings = <&sk LHYPER>;    key-positions = <12 23>; require-prior-idle-ms = <VCMB_RPI_MS>;  timeout-ms = <VCMB_MS>; };
@@ -152,7 +151,7 @@
             bindings = <
 &kp Q         &kp W         &kp E          &kp R          &kp T                              &kp Y   &kp U          &kp I          &kp O         &kp P
 &lpht LGUI A  &lpht LALT S  &lpht LCTRL D  &lpht LSHFT F  &kp G                              &kp H   &rpht RSHFT J  &rpht RCTRL K  &rpht RALT L  &rpht RGUI SEMI
-&lt 5 Z       &kp X         &kp C          &kp V          &kp B                              &kp N   &kp M          &kp COMMA      &kp DOT       &kp SQT
+&kp Z         &kp X         &kp C          &kp V          &kp B                              &kp N   &kp M          &kp COMMA      &kp DOT       &kp SQT
                                                           &lt 2 SPACE  &lt 3 ENTER    &sl 1  MSHFT
             >;
         };
@@ -190,15 +189,6 @@
 &trans          &bt BT_CLR  &out OUT_TOG  &trans        &bt BT_SEL 2                    &bt BT_SEL 2  &trans        &out OUT_TOG  &bt BT_CLR  &trans
 &bt BT_CLR_ALL  &trans      &out OUT_USB  &bt BT_SEL 4  &bt BT_SEL 3                    &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_USB  &trans      &bt BT_CLR_ALL
                                                         &trans        &trans    &trans  &trans
-            >;
-        };
-
-        mou {
-            bindings = <
-&trans  &trans   &trans    &trans    &trans                      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &trans
-&trans  &mkp MB1 &mkp MB2  &mkp MB3  &trans                      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
-&trans  &trans   &mkp MB4  &mkp MB5  &trans                      &trans          &trans          &trans          &trans           &trans
-                                    &trans    &trans    &trans  &trans
             >;
         };
 
