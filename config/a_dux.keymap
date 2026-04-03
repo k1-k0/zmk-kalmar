@@ -22,7 +22,7 @@
 
         mo_med {
             bindings = <&mo 4>;
-            key-positions = <31 32>;
+            key-positions = <30 33>;
         };
     };
 
