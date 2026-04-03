@@ -18,9 +18,9 @@
 #
 ---
 include:
-  - board: nrfmicro/nrf52840/zmk
+  - board: nice_nano//zmk
     shield: a_dux_left
-  - board: nrfmicro/nrf52840/zmk
+  - board: nice_nano//zmk
     shield: a_dux_right
-  - board: nrfmicro/nrf52840/zmk
+  - board: nice_nano//zmk
     shield: settings_reset
