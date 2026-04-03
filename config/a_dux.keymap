@@ -62,7 +62,7 @@
 &kp INS          &kp CAPSLOCK  &key_repeat  &caps_word            &kp ESC                             &kp ESC    &kp PG_UP  &kp UP_ARROW  &kp PG_DN  &kp PSCRN
 &sk LGUI         &sk LALT      &sk LCTRL    &sk LSHFT             &kp ENTER                           &kp ENTER  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PG_UP
 &kp PAUSE_BREAK  &kp K_APP     &kp DEL      &sk LS(LA(LC(LGUI)))  &kp TAB                             &kp TAB    &kp HOME   &kp BSPC      &kp END    &kp PG_DN
-                                                                  &trans     &trans    &kp LC(SPACE)  &trans
+                                                                  &trans     &trans    &trans  &kp LC(SPACE)
             >;
         };
 
