@@ -177,9 +177,9 @@
 
         fun {
             bindings = <
-&trans            &kp F7         &kp F8          &kp F9          &kp F10                    &kp PAUSE_BREAK  &kp C_BRI_UP        &kp C_VOL_UP          &kp C_BRI_DN       &trans
-&lpht LGUI PSCRN  &lpht LALT F4  &lpht LCTRL F5  &lpht LSHFT F6  &kp F11                    &kp INS          &rpht RSHFT C_PREV  &rpht RCTRL C_VOL_DN  &rpht RALT C_NEXT  &rpht RGUI PSCRN
-&kp LNG           &kp F1         &kp F2          &kp F3          &kp F12                    &key_repeat      &kp C_STOP          &kp C_MUTE            &kp C_PP           &trans
+&trans            &kp F7         &kp F8          &kp F9          &kp F10                    &kp PAUSE_BREAK  &kp C_BRI_DN          &kp C_BRI_UP          &kp INS            &trans
+&lpht LGUI PSCRN  &lpht LALT F4  &lpht LCTRL F5  &lpht LSHFT F6  &kp F11                    &kp C_PREV       &rpht RSHFT C_VOL_DN  &rpht RCTRL C_VOL_UP  &rpht RALT C_NEXT  &rpht RGUI PSCRN
+&kp LNG           &kp F1         &kp F2          &kp F3          &kp F12                    &key_repeat      &kp C_STOP            &kp C_MUTE            &kp C_PP           &trans
                                                                  &trans   &trans    &trans  &trans
             >;
         };
