@@ -8,7 +8,7 @@
 
 #define QT_MS 180
 #define HMR_RPI_MS 175
-#define HCMB_RPI_MS 75
+#define HCMB_RPI_MS 150
 #define HCMB_MS 25
 #define VCMB_RPI_MS 50
 #define VCMB_MS 35
