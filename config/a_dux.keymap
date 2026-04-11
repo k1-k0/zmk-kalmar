@@ -9,9 +9,9 @@
 #define QT_MS 180
 #define HMR_RPI_MS 175
 #define HCMB_RPI_MS 75
+#define HCMB_MS 25
 #define VCMB_RPI_MS 50
 #define VCMB_MS 35
-#define HCMB_MS 25
 #define TCMB_RPI_MS 50
 #define TCMB_MS 25
 #define LHYPER LA(LC(LS(LGUI)))
@@ -177,9 +177,9 @@
 
         fun {
             bindings = <
-&trans            &kp F7         &kp F8          &kp F9          &kp F10                    &kp PAUSE_BREAK  &kp C_BRI_DN          &kp C_BRI_UP          &kp INS            &trans
+&trans            &kp F7         &kp F8          &kp F9          &kp F10                    &kp C_RW         &kp C_BRI_DN          &kp C_BRI_UP          &kp C_FF           &kp INS
 &lpht LGUI PSCRN  &lpht LALT F4  &lpht LCTRL F5  &lpht LSHFT F6  &kp F11                    &kp C_PREV       &rpht RSHFT C_VOL_DN  &rpht RCTRL C_VOL_UP  &rpht RALT C_NEXT  &rpht RGUI PSCRN
-&kp LNG           &kp F1         &kp F2          &kp F3          &kp F12                    &key_repeat      &kp C_STOP            &kp C_MUTE            &kp C_PP           &trans
+&kp LNG           &kp F1         &kp F2          &kp F3          &kp F12                    &key_repeat      &kp C_STOP            &kp C_MUTE            &kp C_PP           &kp PAUSE_BREAK
                                                                  &trans   &trans    &trans  &trans
             >;
         };
