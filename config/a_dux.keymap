@@ -37,7 +37,7 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <QT_MS>;
             require-prior-idle-ms = <HMR_RPI_MS>;
@@ -50,7 +50,7 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
 
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <QT_MS>;
             require-prior-idle-ms = <HMR_RPI_MS>;
